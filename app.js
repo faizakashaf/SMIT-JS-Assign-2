@@ -1,16 +1,8 @@
-function searchArray(arr, value) {
-    if (arr.length === 0) {
-      return false;
-    }
-  
-      if (arr[0] === value) {
-      return true;
-    }
-  
-    return searchArray(arr.slice(1), value);
+function createAdder(addition) {
+    return function (num) {
+      return num + addition;
+    };
   }
   
-  // Example usage:
-  const myArray = [1, 2, 3, 4, 5];
-  const searchValue = 3;
-  console.log(searchArray(myArray, searchValue)); // Output: true
+  var add5 = createAdder(5);
+  var result = add5(10); 
